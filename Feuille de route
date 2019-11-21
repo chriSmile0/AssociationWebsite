@@ -1,0 +1,183 @@
+							PW2: Critere a respecter
+
+HTML - Balises claires			
+Majorité de balises génériques
+0 points
+	
+Majorité de balises HTML5
+1 points OK
+
+
+HTML - Accessibilité visuelle	
+Problème d'accessibilité détectés
+0 points
+	
+Aucun problème détecté
+1 points OK
+
+
+
+HTML - Accessibilité code HTML	
+Le code n'est pas correctement imbriqué et/ou indenté
+0 points
+	
+Le code est clairement organisé
+1 points OK
+
+
+HTML - Accessibilité aria	
+Pas d'utilisation de balises Aria
+0 points 
+	
+Utilisation des aria pour le formulaire
+1 points Ok
+
+
+
+HTML - Toutes les balises obligatoires présentes	
+Il manque des balises HTML obligatoires
+0 points 
+	
+Toutes les balises obligatoires sont présentes
+1 points OK
+
+
+
+
+CSS - Code organisé	
+Le code n'est pas correctement organisé
+0 points
+	
+Le code est correctement organisé
+1 points OK
+
+
+
+CSS - Fichiers séparés	
+Tout le CSS est dans le HTML
+0 points
+	
+Le CSS est dans des fichiers séparés
+1 points OK
+
+
+
+CSS - Priorisation sur les sélecteurs CSS généralistes	
+Utilisation uniquement de sélecteur à base d'ID et de class
+0 points
+	
+Utilisation en priorité des sélecteurs imbriqués
+1 points OK
+
+
+
+CSS - Effets de transition sur les éléments de navigation au survol et au clic.	
+La majorité des éléments de navigation n'ont pas d'effet de transition
+0 points
+	
+La majorité des éléments de navigation ont des effets de transition
+1 points OK
+
+
+
+
+CSS - Utiliser au moins un effet de transparence	
+Aucun élément n'a d'effet de transparence
+0 points
+	
+Utilisation au moins d'un effet de transparence (effet sur la couleur ou sur l'élément)
+1 points OK
+
+
+
+JS - Appel AJAX	
+Aucun appel AJAX
+0 points 
+	
+Un appel AJAX pour le chargement des photos
+1 points OK
+
+
+JS - Vérification des données avant envoi	
+Les données ne sont pas vérifiées avant envoi
+0 points
+	
+Les données sont vérifiées avant envoi
+1 points OK
+
+
+
+JS - Affichage des erreurs de formulaire	
+Aucun erreur n'est affiché au niveau du formulaire
+0 points
+	
+Des erreurs sont affichées dans le formulaire en direct ou lors de la soumission
+1 points OK
+
+
+JS - Effet d'apparition ou disparition d'un élément après action utilisateur	
+Aucun élément n’apparaît ou ne disparaît
+0 points
+	
+Au moins un élément apparaît ou disparaît lors d'une action utilisateur
+1 points OK 
+
+
+JS - Bouton de retour en haut de page	
+Le bouton de retour en haut n'est pas présent ou n'est pas fonctionnel
+0 points
+	
+Le bouton de retour en haut est présent et fonctionnel
+1 points OK 
+
+
+
+PHP - Vérification des données reçu	
+Les données PHP ne sont pas vérifiées avant traitement
+0 points
+	
+Les données PHP sont vérifiées avant traitement
+1 points OK
+
+
+PHP - Prévention de la faille XSS	
+Rien n'est fait pour la prévention de la faille XSS
+0 points
+	
+La faille XSS est traitée
+1 points OK
+
+
+PHP - Récupération des informations en base de données	
+Aucune information n'est récupérée depuis la base de données
+0 points
+	
+Des données sont récupérées depuis la base de données
+1 points PAS OK
+
+
+PHP - Écriture des informations en base de données	
+Aucune information n'est écrite dans la base de données
+0 points
+	
+Des données sont écrites dans la base de données
+1 points OK
+
+
+PHP - Création d'un cookie	
+Aucun cookie créé
+0 points
+	
+Un cookie créé
+1 points OK
+
+
+Bilan : 
+19 OK
+1 PAS OK
+
+
+BILAN :
+OK : 18
+PAS OK : 2
+

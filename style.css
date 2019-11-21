@@ -1,0 +1,360 @@
+html {
+    background-color:whitesmoke;
+    opacity:0.8;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+.error {
+    color:red;
+}
+
+
+
+/*Pour caser les photos des anciens festivals je pense a le camoufler en fin de page et creer un bouton dans 'presentation du festival'
+/*Comme ça quand on clique dessus cela fait apparaitre ma div avec les photos dedans 
+/*Pour ce qui est de la RESERVATION je vais faire la meme chose mais d'abord creer une page externe pour developper*/
+
+
+body {
+    margin:0;
+    background-color:silver;
+}
+
+title {
+    color:"black";
+}
+
+
+h2,h4,h6 {
+    text-align:center;
+    font-family:"Merriweather";
+}
+
+
+
+header {
+    /*background-color:brown;*/
+    background-color:rgb(0,10,10);
+}
+
+header img {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    height:250px;
+    width:250px;
+}
+
+p {
+    font-size:20px;
+    font-family:"Roboto";
+}
+
+nav {
+    display:flex;
+    flex-direction:row;
+    border:solid;
+    border-width:0.2px;
+
+}
+
+ nav>a {
+    height:80px;
+    width:25%;
+   /* background-color:rgb(255,0,20);*/
+    background-color:mediumseagreen;
+    border:solid;
+    border-width:0.2px;
+    padding-top:30px;
+    padding-bottom:30px;
+    text-align:center;
+    font-size:20px;
+    text-decoration:none;
+    opacity:0.8;
+
+    
+ }
+ nav>a:hover{
+     background-color:gray;
+ }
+
+
+section {
+    /*background-color:green;*/
+    border:solid;
+    border-width:0.2px;
+    /*opacity:0.9;*/
+    text-align:center;
+}
+
+section>#A2{
+    color:"black";
+    width:100%;
+    height:auto;
+    border:solid;
+    border-width:0.2px;
+    background-color:darkcyan;
+    text-align:center;
+
+}
+
+#A2>p{
+    border:solid;
+    border-width:0px;
+}
+
+section>#A1 {
+    color:"black";
+    width:100%;
+    height:auto;
+    border:solid;
+    border-width:0.2px;
+    background-color:darkcyan;
+}
+
+article>p{
+    width:80%;
+    border:solid;
+    border-width:0px;
+    justify-content:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+#A1>.container2{
+    display:flex;
+    border:solid;
+    border-width:0.2px;
+}
+
+.container2>aside{
+    text-align:center;
+    width:50%;
+    border:solid;
+    border-width:0.1px;
+    background-color:brown;
+}
+
+.container2>aside>iframe {
+    width:75%;
+    height:450px;
+}
+
+.container2>aside>ul{
+    height:auto;
+    border:solid;
+    border-width:0.1px;
+    padding-top:10px;
+    margin-bottom:auto;
+    margin-right:1px;
+    font-size:18px;
+    margin-left:1px;
+    width:100%;
+}
+
+section>.container {
+    display:flex;
+    color:"black";
+    width:100%;
+    height:auto;
+    border:solid;
+    border-width:0.2px;
+}
+
+.container>aside {
+    background-color:darkorange;
+    width:33.33%;
+    height:100px;
+    text-align:center;
+    border:solid;
+    border-width:0.2px;
+    height:auto;
+
+}
+
+.container>aside>p{
+    border:solid;
+    border-width:0px;
+}
+
+.container>aside img {
+    width:140px;
+    height:140px;
+}
+
+
+section:after{
+    content:"";
+    display:table;
+    clear:both;
+}/*La boite section:after est très important , et est effectuer après un float */
+
+
+#R {
+    display:none;
+}
+
+form {
+    background-color:lightgray;
+    opacity:0.9;
+    
+}
+
+form div {
+    margin-top:10px;
+    margin-bottom:10px;
+    display:flex;
+    align-items:center;
+    
+}
+
+div label{
+    margin-left:40px;
+    margin-right:50px;
+    float:left;
+    width:35%;
+    text-align:right;
+}
+
+div textarea{
+    margin-top:10px;
+    margin-bottom:10px;
+    width:40%;
+    height:200px;
+    font-size:15px;
+}
+
+form button {
+    background-color:mediumseagreen;
+    border:solid;
+    border-width:0.2px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    color:rgb(0, 0, 0);
+    height:30px;
+    
+}
+
+#top {
+    display:"none";
+    flex-direction:row;
+    border:solid;
+    border-width:0.0px;
+    height:50px;
+    width:50px;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    border-radius:50px 50px 50px 50px;
+    
+
+}
+
+#top>a {
+    border-radius:50px 50px 50px 50px;
+    width:100%;
+    height:100%;
+   /* background-color:rgb(255,0,20);*/
+    background-color:mediumseagreen;
+    border:solid;
+    display:none;
+    border-width:0.2px;
+    /*padding-top:30px;
+    padding-bottom:30px;*/
+    text-align:center;
+    text-decoration:none;
+    opacity:0.8;
+
+    
+ }
+
+ #top>a>i{
+     padding-top:10px;
+    
+ }
+ 
+
+
+#top:hover{
+    background-color:gray;
+    opacity:0.8;
+    transition: background-color 0.5s;
+}
+
+#recephoto {
+    display:none;
+    margin:0;
+    padding:0;
+}
+
+footer  {
+    background-color:lightblue;
+    text-align:center;
+    height:auto;
+}
+
+footer i {
+    padding-left:10px;
+}
+
+a {
+    color:inherit;
+    z-index:auto;
+}
+
+
+
+
+
+@media screen and (max-width:600px) {
+    nav {
+        flex-direction:column;
+    }
+    nav>a{
+        width:100%;
+    }
+
+    .container2{
+        flex-direction:column;
+    }
+
+    .container2>aside{
+        width:100%;
+    }
+
+    aside>iframe {
+        width:95%;
+        height:450px;
+    }
+    
+    .container {
+        flex-direction:column;
+    }
+
+    .container>aside{
+        width:100%;
+    }
+
+   
+   
+    form div {
+        width:100%;
+        margin-top:10px;
+        margin-bottom:10px;
+        display:flex;
+        flex-direction:column;
+    }
+
+    div label {
+        float:none;
+        margin-left:0px;
+        margin-right:0px;
+        width:auto;
+    }
+}
+/*Good media queries */
