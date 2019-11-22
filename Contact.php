@@ -11,6 +11,13 @@ $nomErr = $prenomErr = $emailErr = "";
 $nomresa = $prenomresa = $emailresa = $joursreserver =  "";
 $nomresaErr = $prenomresaErr = $emailresaErr = "";
 
+$nom_donnees = $prenom_donnees = $email_donnees = $sujetmessage_donnees = "";
+$messag_donnees = $YourInput = "";
+
+$nom_donnees_resa = $prenom_donnees_resa = $email_donnees_resa = "";
+$YourInputResa = $joursreserver_donnees_resa = "";
+        
+
 
 function test_input($data){
     $data = htmlspecialchars($data);
@@ -25,7 +32,7 @@ if (isset($_POST['submitcontact'])) #On a cliqué sur le premier bouton
     $ano = $_POST['anonyme'];
     if($ano === "Oui"){
         if(empty($_POST['message'])){
-            $messag = "";
+            $messag = "No";
         }
         else {
             $messag = test_input($_POST['message']);
@@ -34,7 +41,7 @@ if (isset($_POST['submitcontact'])) #On a cliqué sur le premier bouton
 //SI il ne veut pas rester anonyme
     else {
         if(empty($_POST['nom'])){
-            $nom = "";
+            $nom = "No";
         }
         else {
             $nom = test_input($_POST['nom']);
@@ -44,7 +51,7 @@ if (isset($_POST['submitcontact'])) #On a cliqué sur le premier bouton
         }
 
         if(empty($_POST['prenom'])){
-            $prenom = "";
+            $prenom = "No";
         }
         else {
             $prenom = test_input($_POST['prenom']);
@@ -55,7 +62,7 @@ if (isset($_POST['submitcontact'])) #On a cliqué sur le premier bouton
         }
 
         if(empty($_POST['email'])){
-            $email = "";
+            $email = "No";
         }   
         else {
             $email = test_input($_POST['email']);
@@ -64,7 +71,7 @@ if (isset($_POST['submitcontact'])) #On a cliqué sur le premier bouton
             }
         }
         if(empty($_POST['message'])){
-            $messag = "";
+            $messag = "No";
         }
         else {
             $messag = test_input($_POST['message']);
@@ -73,48 +80,66 @@ if (isset($_POST['submitcontact'])) #On a cliqué sur le premier bouton
 
     $sujetmessage = $_POST['sujetmessage'];
 
-    try {
-        $bdd= new PDO("mysql:host=localhost", 'root', '');
-        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "CREATE  DATABASE IF NOT EXISTS myDb";
-        $bdd->exec($sql);
-        echo "success database";
-        }
-    catch(PDOException $e){}
     
-    $bdd = null;
+    
 
-    try{
-        $bdd = new PDO('mysql:host=localhost;dbname=myDb;charset=utf8', 'root', '');
+   try{
+        //$bdd = new PDO('mysql:host=localhost;dbname=myDb;charset=utf8', 'root', '');
+        $bdd = new PDO('sqlite:' . dirname(__FILE__) . '/database.db');
         $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         $sql = "CREATE TABLE IF NOT EXISTS Contacts (
-            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            id INTEGER PRIMARY KEY AUTOINCREMENT ,
             nom VARCHAR(30) NOT NULL,
             prenom VARCHAR(30) NOT NULL,
             email VARCHAR(50),
-            sujetmessage VARCHAR(13),
+            sujetmessag VARCHAR(13),
             messag TEXT
             )";
         
            
             $bdd->exec($sql);
-            echo "success create table";
+            //echo "success create table";
             }
-    catch(PDOException $e){}
+    catch(PDOException $e){
+        var_dump($e->getMessage());
+    }
+
+
      
-    $bdd = null;
  
     try {
-        $bdd = new PDO('mysql:host=localhost;dbname=myDb;charset=utf8', 'root', '');
-       
-        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO Contacts (nom, prenom, email,sujetmessage,messag)
+        //$bdd = new PDO('mysql:host=localhost;dbname=myDb;charset=utf8', 'root', '');
+        $sql = "INSERT INTO Contacts (nom, prenom, email,sujetmessag,messag)
         VALUES ('$nom','$prenom','$email','$sujetmessage','$messag')";
         $bdd->exec($sql);
-        echo "success insert values";
-        
         }
-    catch(PDOException $e){}
+    catch(PDOException $e){
+        var_dump($e->getMessage());
+    }
+
+
+    try {
+    
+        $sql = "SELECT nom,prenom,email,sujetmessag,messag FROM Contacts WHERE id IN (SELECT max(id) FROM Contacts)";
+        $result  = $bdd->query($sql);
+
+        $row = $result->fetch();
+
+        $YourInput = "<h4>Vos données de contacts</h4>" ;
+        $nom_donnees = "Nom : " . $row['nom'] . "<br>";
+        $prenom_donnees = "Prenom : " . $row['prenom'] . "<br>";
+        $email_donnees = "Email : " . $row['email'] . "<br>";
+        $sujetmessage_donnees = "Sujet message : " . $row['sujetmessag'] . "<br>";
+        $messag_donnees = "Message : " . $row['messag'] . "<br>";
+        
+
+
+        
+        
+    }
+    catch(PDOEXCEPTION $e){
+        var_dump($e->getMessage());
+    }
 
     $bdd = null;
 }
@@ -153,20 +178,10 @@ elseif (isset($_POST['submitresa'])){
     $joursreserver = $_POST['joursreserver'];
 
     try {
-        $bdd= new PDO("mysql:host=localhost", 'root', '');
-        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "CREATE  DATABASE IF NOT EXISTS myDb";
-        $bdd->exec($sql);
-        }
-    catch(PDOException $e){}
-    
-    $bdd = null;
-   
-    try {
-        $bdd = new PDO('mysql:host=localhost;dbname=myDb;charset=utf8', 'root', '');
+        $bdd = new PDO('sqlite:' . dirname(__FILE__) . '/database.db');
         $bdd->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         $sql = "CREATE TABLE IF NOT EXISTS Reservation (
-            id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
             nomresa VARCHAR(30) NOT NULL,
             prenomresa VARCHAR(30) NOT NULL,
             emailresa VARCHAR(50),
@@ -177,17 +192,39 @@ elseif (isset($_POST['submitresa'])){
     catch(PDOException $e){} 
         
 
-        
-    $bdd = null;
 
     try {
-        $bdd = new PDO('mysql:host=localhost;dbname=myDb;charset=utf8', 'root', '');
+       
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $sql = "INSERT INTO Reservation (nomresa, prenomresa, emailresa,joursreserver)
         VALUES ('$nomresa','$prenomresa','$emailresa','$joursreserver')";
         $bdd->exec($sql);
         }
     catch(PDOException $e){}
+
+        try {
+    
+            $sql = "SELECT nomresa,prenomresa,emailresa,joursreserver FROM Reservation WHERE id IN (SELECT max(id) FROM Reservation)";
+            $result  = $bdd->query($sql);
+    
+            $row = $result->fetch();
+    
+            $YourInputResa = "<h4>Vos données de Reservation</h4>" ;
+            $nom_donnees_resa = "Nom : " . $row['nomresa'] . "<br>";
+            $prenom_donnees_resa = "Prenom : " . $row['prenomresa'] . "<br>";
+            $email_donnees_resa = "Email : " . $row['emailresa'] . "<br>";
+            $joursreserver_donnees_resa = "Jours reserver : " . $row['joursreserver'] . "<br>";
+            
+    
+    
+            
+            
+        }
+        catch(PDOEXCEPTION $e){
+            var_dump($e->getMessage());
+        }
+
+    
         
     
     $bdd = null;

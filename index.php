@@ -220,31 +220,28 @@
                 <label for="nomresa">Nom</label>
                 <input name="nomresa" 
                        type="text" 
-                       onblur="verifNom(this)"  
                        aria-labelledby="nomresa"
                        required aria-required="true">
-                <span class="error" id="errorNomResa"></span>
+                <!--<span class="error" id="errorNomResa"></span>-->
                 <span class="error"> <?php echo $nomresaErr;?></span>
             </div>
             <div>
                 <label for="prenomresa">Prenom</label>
                 <input name="prenomresa" 
                        type="text" 
-                       onblur="verifPrenom(this)"  
                        aria-labelledby="prenomresa"
                        required aria-required="true">
-                <span class="error" id="errorPrenomResa"></span>
+                <!--<span class="error" id="errorPrenomResa"></span>-->
                 <span class="error"><?php echo $prenomresaErr;?></span>
             </div>
             <div>
                 <label for="emailresa">Mail</label>
                 <input name="emailresa" 
-                       type="text" 
-                       onblur="verifEmail(this)"  
+                       type="text"  
                        aria-labelledby="emailresa"
                        required aria-required="true">
-                <span class="error" id="errorEmailResa"></span>
-                <span class="error"> <?php echo $emailresaErr;?></span>
+                <!--<span class="error" id="errorEmailResa"></span>-->
+                <span class="error"><?php echo $emailresaErr;?></span>
             </div>
             <div>
                 <label for="joursreserver">Jour(s) reservé(s)</label>
@@ -259,6 +256,22 @@
                     type="submit" value="Envoyer_resa">Envoyer</button>
         </fieldset>
     </form>
+
+
+
+<?php
+echo $YourInput;
+echo $nom_donnees;
+echo $prenom_donnees;
+echo $email_donnees;
+echo $sujetmessage_donnees;
+echo $messag_donnees;
+echo $YourInputResa;
+echo $nom_donnees_resa;
+echo $prenom_donnees_resa;
+echo $email_donnees_resa;
+echo $joursreserver_donnees_resa;
+?>
     
     <div id="top">
         <a id="top_a" href="#H">
