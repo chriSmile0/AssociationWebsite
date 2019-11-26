@@ -11,12 +11,12 @@ html {
     color:red;
 }
 
-
-
-/*Pour caser les photos des anciens festivals je pense a le camoufler en fin de page et creer un bouton dans 'presentation du festival'
-/*Comme ça quand on clique dessus cela fait apparaitre ma div avec les photos dedans 
-/*Pour ce qui est de la RESERVATION je vais faire la meme chose mais d'abord creer une page externe pour developper*/
-
+/*Pour caser les photos des anciens festivals je pense a le camoufler 
+en fin de page et creer un bouton dans 'presentation du festival'
+Comme ça quand on clique dessus cela fait apparaitre ma div avec les photos 
+dedans */
+/*Pour ce qui est de la RESERVATION je vais faire la meme chose mais d'abord 
+creer une page externe pour developper*/
 
 body {
     margin:0;
@@ -27,13 +27,10 @@ title {
     color:"black";
 }
 
-
 h2,h4,h6 {
     text-align:center;
     font-family:"Merriweather";
 }
-
-
 
 header {
     /*background-color:brown;*/
@@ -64,7 +61,6 @@ nav {
  nav>a {
     height:80px;
     width:25%;
-   /* background-color:rgb(255,0,20);*/
     background-color:mediumseagreen;
     border:solid;
     border-width:0.2px;
@@ -73,20 +69,16 @@ nav {
     text-align:center;
     font-size:20px;
     text-decoration:none;
-    opacity:0.8;
-
-    
+    opacity:0.8; 
  }
+
  nav>a:hover{
      background-color:gray;
  }
 
-
 section {
-    /*background-color:green;*/
     border:solid;
     border-width:0.2px;
-    /*opacity:0.9;*/
     text-align:center;
 }
 
@@ -98,7 +90,6 @@ section>#A2{
     border-width:0.2px;
     background-color:darkcyan;
     text-align:center;
-
 }
 
 #A2>p{
@@ -123,7 +114,6 @@ article>p{
     margin-left:auto;
     margin-right:auto;
 }
-
 
 #A1>.container2{
     display:flex;
@@ -186,7 +176,6 @@ section>.container {
     height:140px;
 }
 
-
 section:after{
     content:"";
     display:table;
@@ -194,15 +183,13 @@ section:after{
 }
 /*La boite section:after est très important ,et est effectuer après un float*/
 
-
 #R {
     display:none;
 }
 
 form {
     background-color:lightgray;
-    opacity:0.9;
-    
+    opacity:0.9; 
 }
 
 form div {
@@ -210,7 +197,6 @@ form div {
     margin-bottom:10px;
     display:flex;
     align-items:center;
-    
 }
 
 div label{
@@ -237,8 +223,7 @@ form button {
     margin-left:auto;
     margin-right:auto;
     color:rgb(0, 0, 0);
-    height:30px;
-    
+    height:30px;  
 }
 
 #top {
@@ -252,8 +237,6 @@ form button {
     bottom:20px;
     right:20px;
     border-radius:50px 50px 50px 50px;
-    
-
 }
 
 #top>a {
@@ -267,16 +250,11 @@ form button {
     text-align:center;
     text-decoration:none;
     opacity:0.8;
-
-    
  }
 
  #top>a>i{
-     padding-top:10px;
-    
+     padding-top:10px; 
  }
- 
-
 
 #top:hover{
     background-color:gray;
@@ -304,10 +282,6 @@ a {
     color:inherit;
     z-index:auto;
 }
-
-
-
-
 
 @media screen and (max-width:600px) {
     nav {
@@ -338,8 +312,6 @@ a {
         width:100%;
     }
 
-   
-   
     form div {
         width:100%;
         margin-top:10px;
@@ -355,4 +327,3 @@ a {
         width:auto;
     }
 }
-/*Good media queries */

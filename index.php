@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Christopher Spitz">
+    <meta name="description" content="Projet 'Festival du Jeu">
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet"/>
     <link rel="stylesheet" 
@@ -213,7 +216,7 @@
         </fieldset>
     </form>
     <form name="resa" id="R" method="POST" 
-          onsubmit="return veriffromResa(this)">
+          onsubmit="return verifformResa(this)">
         <fieldset>
             <h2>Reserver</h2>
             <div>
@@ -222,7 +225,7 @@
                        type="text" 
                        aria-labelledby="nomresa"
                        required aria-required="true">
-                <!--<span class="error" id="errorNomResa"></span>-->
+                <span class="error" id="errorNomR"></span>
                 <span class="error"> <?php echo $nomresaErr;?></span>
             </div>
             <div>
@@ -231,16 +234,16 @@
                        type="text" 
                        aria-labelledby="prenomresa"
                        required aria-required="true">
-                <!--<span class="error" id="errorPrenomResa"></span>-->
+                <span class="error" id="errorPrenomR"></span>
                 <span class="error"><?php echo $prenomresaErr;?></span>
             </div>
             <div>
                 <label for="emailresa">Mail</label>
                 <input name="emailresa" 
-                       type="text"  
+                       type="text" 
                        aria-labelledby="emailresa"
                        required aria-required="true">
-                <!--<span class="error" id="errorEmailResa"></span>-->
+                <span class="error" id="errorEmailR"></span>
                 <span class="error"><?php echo $emailresaErr;?></span>
             </div>
             <div>
@@ -259,19 +262,19 @@
 
 
 
-<?php
-echo $YourInput;
-echo $nom_donnees;
-echo $prenom_donnees;
-echo $email_donnees;
-echo $sujetmessage_donnees;
-echo $messag_donnees;
-echo $YourInputResa;
-echo $nom_donnees_resa;
-echo $prenom_donnees_resa;
-echo $email_donnees_resa;
-echo $joursreserver_donnees_resa;
-?>
+    <?php
+    echo $YourInput;
+    echo $nom_donnees;
+    echo $prenom_donnees;
+    echo $email_donnees;
+    echo $sujetmessage_donnees;
+    echo $messag_donnees;
+    echo $YourInputResa;
+    echo $nom_donnees_resa;
+    echo $prenom_donnees_resa;
+    echo $email_donnees_resa;
+    echo $joursreserver_donnees_resa;
+    ?>
     
     <div id="top">
         <a id="top_a" href="#H">
@@ -294,11 +297,11 @@ echo $joursreserver_donnees_resa;
             <i class="fa fa-facebook-square" style="font-size:40px;"></i>
         </a>
         <a href="http://www.twitter.com" target="_blank" title="Twitter">
-        <!--_blank sert a ouvrir la page facebook sur un autre onglet-->
+        <!--_blank sert a ouvrir la page twitter sur un autre onglet-->
             <i class="fa fa-twitter-square" style="font-size:40px;"></i>
         </a>
         <a href="http://www.instagram.com" target="_blank" title="Instagram">
-        <!--_blank sert a ouvrir la page facebook sur un autre onglet-->
+        <!--_blank sert a ouvrir la page instagram sur un autre onglet-->
             <i class="fa fa-instagram" style="font-size:40px"></i>
         </a>
     </footer>
