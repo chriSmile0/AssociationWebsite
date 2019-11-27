@@ -1,0 +1,23 @@
+
+*** These modified files were found in JOE when it aborted on Wed Nov 27 18:06:15 2019
+*** JOE was aborted because the terminal closed
+
+*** Fichier '/var/www/html/c.spitz/projet_pw2/.git/COMMIT_EDITMSG'
+
+# Veuillez saisir le message de validation pour vos modifications. Les lignes
+# commençant par '#' seront ignorées, et un message vide abandonne la validation.
+#
+# Sur la branche master
+# Votre branche est à jour avec 'origin/master'.
+#
+# Modifications qui seront validées :
+#	supprimé :        projet_pw2
+#
+
+*** Fichier '(Sans nom)'
+/adhome/c/cs/c.spitz/.gitconfig
+/var/www/html/c.spitz/projet_pw2/.git/COMMIT_EDITMSG
+
+*** Fichier '* Startup Log *'
+Traitement de '/etc/joe/editorrc'...Traitement de '/etc/joe/ftyperc'...Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/editorrc
