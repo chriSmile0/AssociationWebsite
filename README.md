@@ -1,7 +1,7 @@
 Pour le telechargement du fichier je recommande de le cloner avec la clé https 
 
 
-										Presentation du Projet: Festival du Jeu 
+					Presentation du Projet: Festival du Jeu 
 
 Pour ce projet du 'Festival du Jeu' il a fallu creer son site web sois en multi page sois en onepage
 J'ai choisi la onepage malgrès que j'avais dit lors du TP1 que la multipage serait une bonne option.
