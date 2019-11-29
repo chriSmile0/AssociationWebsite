@@ -153,7 +153,7 @@ Aucune information n'est récupérée depuis la base de données
 0 points
 	
 Des données sont récupérées depuis la base de données
-1 points PAS OK
+1 points OK
 
 
 PHP - Écriture des informations en base de données	
@@ -173,11 +173,5 @@ Un cookie créé
 
 
 Bilan : 
-19 OK
-1 PAS OK
-
-
-BILAN :
-OK : 18
-PAS OK : 2
+20 OK
 
